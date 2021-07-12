@@ -20,6 +20,7 @@ int main() {
 	//rows are written top to bottom
 	
 	for (int j = height - 1; j>= 0; --j) {
+		std::cerr << "\rScanlines Remaining: " << j << ' ' << std::flush;
 		for (int i = 0; i < width; ++ i) {
 			
 			//rgb ranges from 0.0 to 1.0
@@ -34,4 +35,6 @@ int main() {
 			std::cout << ir << ' ' << ig << ' ' << ib << '\n';
 		}
 	}
+	
+	std::cerr << "\nDone\n";
 }
