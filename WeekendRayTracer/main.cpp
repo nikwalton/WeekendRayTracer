@@ -4,11 +4,11 @@
 //
 //  Created by Nikolaus Walton on 7/11/21.
 //
-
-
-#include <iostream>
 #include "color.h"
 #include "vec3.h"
+
+#include <iostream>
+
 
 int main() {
 
