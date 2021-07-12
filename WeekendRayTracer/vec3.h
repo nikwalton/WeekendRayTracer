@@ -6,7 +6,10 @@
 //
 
 #ifndef VEC3_H
-#define VEC3_h
+#define VEC3_H
+
+#include<cmath>
+#include<iostream>
 
 using std::sqrt;
 
@@ -37,6 +40,14 @@ public:
 		return *this;
 	}
 	
+	vec3& operator*=(const double t)
+	{
+		e[0] *= t;
+		e[1] *= t;
+		e[2] *= t;
+		return *this;
+	}
+	
 	//division
 	vec3& operator/=(const double t)
 	{
@@ -44,7 +55,7 @@ public:
 	}
 	
 	//pythagorean theorem functions
-	double length() const
+	const double length()
 	{
 		return sqrt(length_squared());
 	}
@@ -55,7 +66,7 @@ public:
 	}
 	
 public:
-	double e[3]
+	double e[3];
 };
 
 //type aliases for comfort
@@ -70,7 +81,7 @@ inline std::ostream& operator<<(std::ostream &out, const vec3 &v)
 
 inline vec3 operator+(const vec3 &u, const vec3 &v)
 {
-	return vec3(u.e[0]+v.e[0], u.e[1] + v.e[1], u.e[2] + v.[2]);
+	return vec3(u.e[0]+v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
 }
 
 inline vec3 operator-(const vec3 &u, const vec3 &v)
@@ -83,22 +94,25 @@ inline vec3 operator*(const vec3 &u, const vec3 &v)
 	return vec3(u.e[0] * v.e[0], u.e[1] * v.e[1], u.e[2] * v.e[2]);
 }
 
-inline vec3 operator *(const vec3 &v, double t)
+inline vec3 operator*(double t, const vec3 &v)
+{
+	return vec3(t*v.e[0], t*v.e[1], t*v.e[2]);
+}
+
+inline vec3 operator*(const vec3 &v, double t)
 {
 	return t * v;
 }
 
-inline vec3 operator/(vec3 v,double t)
-{
+inline vec3 operator/(vec3 v, double t) {
 	return (1/t) * v;
 }
 
+
 //dot product
-inline double dot(const vec3 &u, const vec3 *v)
+inline double dot(const vec3 &u, const vec3 &v)
 {
-	return u.e[0] * v.e[0]
-		+ u.e[1] * v.e[1]
-		+ u.e[2] * v.e[2]
+	return u.e[0] * v.e[0] + u.e[1] * v.e[1] + u.e[2] * v.e[2];
 }
 
 //cross product
