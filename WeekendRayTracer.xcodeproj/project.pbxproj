@@ -27,6 +27,7 @@
 		3F0B8504269B39200026E445 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3F0B850B269BAE000026E445 /* vec3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vec3.h; sourceTree = "<group>"; };
 		3F0B850C269C2CA90026E445 /* color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		3F95164E269D2D660006E874 /* ray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ray.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				3F0B8504269B39200026E445 /* main.cpp */,
 				3F0B850B269BAE000026E445 /* vec3.h */,
 				3F0B850C269C2CA90026E445 /* color.h */,
+				3F95164E269D2D660006E874 /* ray.h */,
 			);
 			path = WeekendRayTracer;
 			sourceTree = "<group>";
